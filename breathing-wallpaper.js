@@ -1,0 +1,12 @@
+src(o0).scale(1.09)
+
+	.blend(shape(5,0.1,0.51).modulate(noise()),0.5)
+	.blend(osc(1,0.1,1.11))
+    .diff(shape(4,0.135,0.35)
+         .modulateScrollX(osc(106,0.2,2).modulate(noise(0.2), 0.3))
+          .modulateScrollY(noise(()=> Math.cos(time/20)))
+          .rotate(Math.PI/4)
+          .repeat(6,6,0.5,0.5)
+         )
+    .blend(src(o0).scale(0.5).modulate(osc(0.2)),0.7)
+.out(o0)
